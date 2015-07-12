@@ -1,6 +1,7 @@
+$(document).ready(function() {
+  console.log("hello there jess")
+});
 
-alert("are your working ?")
-console.log("are your working ?")
 // The init function needs to run on load
 google.maps.event.addDomListener(window, 'load', initialize_my_map)
 google.maps.event.addDomListener(window, 'page:load', initialize_my_map)
