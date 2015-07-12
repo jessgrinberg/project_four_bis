@@ -1,6 +1,21 @@
 $(document).ready(function() {
+
   console.log("hello there jess")
 });
+
+/////////////////////////////////
+////trying to the ip address of the user to zoom the map based on its IP
+var longitude, latitude;
+$.getJSON("http://ip-api.com/json/?callback=?", function(data) {
+        
+    latitude = data.lat;
+    longitude = data.lon;
+});
+
+    console.log(latitude);
+    console.log(longitude);
+
+/////////////////////////////////
 
 // The init function needs to run on load
 google.maps.event.addDomListener(window, 'load', initialize_my_map)
@@ -46,17 +61,21 @@ console.log("work 1?")
 
         }
 
-        // Dispatch the promises
+   // Dispatch the promises
         Promise.all(geo_promises).then(function(promise_results){
-
+            
             // Create a map
+            // these are the map options
             var mapProps = {
-                mapTypeId: google.maps.MapTypeId.ROADMAP
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                zoom: 10,
+                center: new google.maps.LatLng(59.09,-89.3617)
+                // center: { lat: -10.397, lng: 100.644}
             }
             var map = new google.maps.Map(el, mapProps)
 
             // Bounds are cool because they center our map for us
-            var bounds = new google.maps.LatLngBounds()
+            // var bounds = new google.maps.LatLngBounds()
 
             // Track an array of our markers
             var markers = []
@@ -75,7 +94,7 @@ console.log("work 1?")
                 markers.push(marker)
 
                 // Add the coordinates to the bounds (so we can center the map)
-                bounds.extend(coord)
+                // bounds.extend(coord)
 
                 // Create an info window
                 var infowindow = new google.maps.InfoWindow({
@@ -88,7 +107,7 @@ console.log("work 1?")
             }
 
             // Center and fit the map using the bounds
-            map.fitBounds(bounds)
+             // map.fitBounds(bounds)
 
         })
 
