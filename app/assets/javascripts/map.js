@@ -69,8 +69,13 @@ console.log("work 1?")
                 // result now represents a single geocoded address
                 var coord = promise_result.geometry.location
 
+
+
                 // Create and place a marker
-                var marker = new google.maps.Marker({position: coord})
+                var marker = new google.maps.Marker
+                    ({position: coord
+                      // icon: 'marker.jpg'
+                    })
                 marker.setMap(map)
                 markers.push(marker)
 

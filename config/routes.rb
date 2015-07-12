@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'static_pages/welcome'
   # You can have the root of your site routed with "root"
   root 'static_pages#welcome'
+  # root 'maps#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
