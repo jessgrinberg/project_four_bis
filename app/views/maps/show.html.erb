@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Organization:</strong>
+  <strong>Name:</strong>
   <%= @map.organization %>
 </p>
 
@@ -10,20 +10,8 @@
   <%= @map.address %>
 </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @map.phone %>
-</p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @map.website %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @map.user_id %>
-</p>
-
 <%= link_to 'Edit', edit_map_path(@map) %> |
 <%= link_to 'Back', maps_path %>
+
+<div id='address-map' style="width: 100%; height: 400px;"></div>
+

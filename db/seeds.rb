@@ -5,4 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-users = User.create([{ email: "jess@jess.com"}])
+Map.delete_all
+Map.create([
+	{organization: 'Huxley', address: '1234 north la brea ave, West Hollywood, CA 90038'}
+
+])
