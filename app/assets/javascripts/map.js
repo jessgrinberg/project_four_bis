@@ -1,6 +1,34 @@
 $(document).ready(function() {
+
   console.log("hello there jess")
 });
+
+
+// function getLocation() {
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(showPosition);
+//     } else {
+//         x.innerHTML = "Geolocation is not supported by this browser.";
+//     }
+// }
+// function showPosition(position) {
+//     x.innerHTML = "Latitude: " + position.coords.latitude + 
+//     "<br>Longitude: " + position.coords.longitude; 
+// }
+
+/////////////////////////////////
+////trying to the ip address of the user to zoom the map based on its IP
+// var longitude, latitude;
+// $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
+        
+//     latitude = data.lat;
+//     longitude = data.lon;
+// });
+
+//     console.log(latitude);
+//     console.log(longitude);
+
+/////////////////////////////////
 
 // The init function needs to run on load
 google.maps.event.addDomListener(window, 'load', initialize_my_map)
@@ -46,17 +74,21 @@ console.log("work 1?")
 
         }
 
-        // Dispatch the promises
+   // Dispatch the promises
         Promise.all(geo_promises).then(function(promise_results){
-
+            
             // Create a map
+            // these are the map options
             var mapProps = {
-                mapTypeId: google.maps.MapTypeId.ROADMAP
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                zoom: 10
+                // center: new google.maps.LatLng(59.09,-89.3617)
+                // center: { lat: -10.397, lng: 100.644}
             }
             var map = new google.maps.Map(el, mapProps)
 
             // Bounds are cool because they center our map for us
-            var bounds = new google.maps.LatLngBounds()
+             var bounds = new google.maps.LatLngBounds()
 
             // Track an array of our markers
             var markers = []
@@ -69,22 +101,17 @@ console.log("work 1?")
                 // result now represents a single geocoded address
                 var coord = promise_result.geometry.location
 
-
-
                 // Create and place a marker
-                var marker = new google.maps.Marker
-                    ({position: coord
-                      // icon: 'marker.jpg'
-                    })
+                var marker = new google.maps.Marker({position: coord})
                 marker.setMap(map)
                 markers.push(marker)
 
                 // Add the coordinates to the bounds (so we can center the map)
-                bounds.extend(coord)
+                 bounds.extend(coord)
 
                 // Create an info window
                 var infowindow = new google.maps.InfoWindow({
-                    content: "<h1>" + results[i].name + "</h1>" + promise_result.formatted_address
+                    content: "<h1>" + results[i].organization + "</h1>" + promise_result.formatted_address
                 })
 
                 // Open it above the marker
@@ -93,7 +120,7 @@ console.log("work 1?")
             }
 
             // Center and fit the map using the bounds
-            map.fitBounds(bounds)
+              map.fitBounds(bounds)
 
         })
 
