@@ -22,16 +22,16 @@
 }*/
 
 body {
-	margin:0;
+margin:0;
 } 
 
 
 .container {
-	width:100%;
-	height:100%;
-	background: url("http://1vze7o2h8a2b2tyahl3i0t68.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/lacma.jpg") no-repeat center center;
-	background-size:cover;
-	position:absolute;
+width:100%;
+height:100%;
+background: url("http://1vze7o2h8a2b2tyahl3i0t68.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/lacma.jpg") no-repeat center center;
+background-size:cover;
+position:absolute;
 }
 
 /*article {
@@ -54,4 +54,8 @@ span.btn {
   color: white;
   font-size: 17px;
   cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
