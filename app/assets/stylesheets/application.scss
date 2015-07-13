@@ -15,3 +15,43 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+/*html, body {
+  height: 100%;
+  background-color: #333;
+}*/
+
+body {
+	margin:0;
+} 
+
+
+.container {
+	width:100%;
+	height:100%;
+	background: url("http://1vze7o2h8a2b2tyahl3i0t68.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/lacma.jpg") no-repeat center center;
+	background-size:cover;
+	position:absolute;
+}
+
+/*article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  z-index: 1;
+  width: 600px;
+  height: 200px;
+  margin: -100px 0 0 -300px;
+  text-align: center;
+  display: block;
+}
+*/
+span.btn {
+  display: inline-block;
+  background: rgba(0,0,0,0.5);
+  padding: 15px;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}

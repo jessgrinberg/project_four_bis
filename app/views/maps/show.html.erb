@@ -1,17 +1,12 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @map.organization %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @map.address %>
-</p>
+<ol class="breadcrumb">
+  <li> <%= @map.organization %></li>
+  <li> <%= @map.address %></li>
+<li> <%= @map.phone %></li>
+<li> <%= @map.website %></li>
+</ol>
 
 <%= link_to 'Edit', edit_map_path(@map) %> |
 <%= link_to 'Back', maps_path %>
 
 <div id='address-map' style="width: 100%; height: 400px;"></div>
-

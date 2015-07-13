@@ -4,6 +4,13 @@ $(document).ready(function() {
 });
 
 
+// if (navigator.geolocation) {
+//      navigator.geolocation.getCurrentPosition(function (position) {
+//          initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+//          map.setCenter(initialLocation);
+//      });
+//  }
+
 // function getLocation() {
 //     if (navigator.geolocation) {
 //         navigator.geolocation.getCurrentPosition(showPosition);
@@ -17,16 +24,17 @@ $(document).ready(function() {
 // }
 
 /////////////////////////////////
-////trying to the ip address of the user to zoom the map based on its IP
-// var longitude, latitude;
-// $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
-        
-//     latitude = data.lat;
-//     longitude = data.lon;
-// });
+//trying to the ip address of the user to zoom the map based on its IP
+var longitude, latitude;
 
-//     console.log(latitude);
-//     console.log(longitude);
+$.getJSON("http://ip-api.com/json/?callback=?", function(data) {
+        
+    latitude = data.lat;
+    longitude = data.lon;
+});
+
+    console.log(latitude);
+    console.log(longitude);
 
 /////////////////////////////////
 
@@ -39,10 +47,10 @@ function initialize_my_map() {
 
     // Find the map DIV (if it exists)
     var el = document.getElementById('address-map')
-console.log("work 1?")
+
     // Bail out if there's not an address map on the page
     if(!el) return
-console.log("work 1?")
+
     // Get an instance of the geocoder
     var geocoder = new google.maps.Geocoder()
 
@@ -81,9 +89,9 @@ console.log("work 1?")
             // these are the map options
             var mapProps = {
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
-                zoom: 10
-                // center: new google.maps.LatLng(59.09,-89.3617)
-                // center: { lat: -10.397, lng: 100.644}
+                zoom: 10,
+                center: new google.maps.LatLng(59.09,-89.3617)
+                 // center: {  -10.397,100.644}
             }
             var map = new google.maps.Map(el, mapProps)
 
@@ -111,7 +119,7 @@ console.log("work 1?")
 
                 // Create an info window
                 var infowindow = new google.maps.InfoWindow({
-                    content: "<h1>" + results[i].organization + "</h1>" + promise_result.formatted_address
+                    content: "<h1>" + results[i].organization + "</h1>" + promise_result.formatted_address 
                 })
 
                 // Open it above the marker

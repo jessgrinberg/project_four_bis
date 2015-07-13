@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>ProjectFourBis</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -16,7 +16,10 @@ src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAo6PzRAoZk4B0bjhRAuf-w75EP
 
 
 </head>
+
 <body>
+
+
 
 <% if user_signed_in? %>
 <%= current_user.email %>
@@ -25,9 +28,16 @@ src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAo6PzRAoZk4B0bjhRAuf-w75EP
  <%= link_to 'Login', new_user_session_path %>
 <% end %>
 
- <p class="notice"><%= notice %></p>
- <p class="alert"><%= alert %></p>
-
+<!--  <p class="notice"><%= notice %></p>
+ <p class="alert"><%= alert %></p> -->
+<%# unless flash.blank? %>
+  <%# flash.each do |type, message| %>
+   <!--  <div class="alert <%#= bootstrap_class_for(type) %> fade in">
+      <button class="close" data-dismiss="alert">×</button> -->
+      <%#= message %>
+   <!--  </div> -->
+  <%#end %>
+<%# end %>
 
 <%= yield %>
 
