@@ -16,3 +16,13 @@
 //= require map.js
 //= require_tree .
 
+
+
+$(document).ready(function(){
+
+
+	$('#navTop').click(function(){
+		$('#menuToggle').slideToggle()
+	})
+
+})

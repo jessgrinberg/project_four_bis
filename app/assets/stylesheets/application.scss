@@ -59,3 +59,36 @@ span.btn {
   top: 50%;
   left: 50%;
 }
+
+
+#navTop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: .25em .5em 0;
+
+  z-index: 1000;
+  background-color: rgba(255,255,255,.9);
+  font-family: bebas neue;
+  letter-spacing: .05em;
+}
+
+
+#menuToggle {
+  display: none;
+  width: 100vw;
+  z-index: 2000;
+  text-align: right;
+  padding-right: 2.5em;
+}
+
+#menuToggle .row {
+  margin: 0;
+  padding-right: 1.5em;
+}
+
+#menuToggle .row:hover {
+  background-color: black;
+  background-image: none;
+  color: white;
+}
