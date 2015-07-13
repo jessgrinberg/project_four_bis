@@ -90,7 +90,7 @@ function initialize_my_map() {
             var mapProps = {
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
                 zoom: 10,
-                center: new google.maps.LatLng(59.09,-89.3617)
+                center: new google.maps.LatLng(34.0194,-118.4912)
                  // center: {  -10.397,100.644}
             }
             var map = new google.maps.Map(el, mapProps)

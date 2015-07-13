@@ -23,6 +23,7 @@
 
 body {
 margin:0;
+color: white;
 } 
 
 
@@ -34,6 +35,15 @@ background-size:cover;
 position:absolute;
 }
 
+#menuHead {
+  position: absolute;
+  display: none;
+
+}
+
+.article{
+  color: white;
+}
 /*article {
   position: absolute;
   top: 50%;
@@ -49,9 +59,9 @@ position:absolute;
 */
 span.btn {
   display: inline-block;
-  background: rgba(0,0,0,0.5);
-  padding: 15px;
-  color: white;
+/*  background: rgba(0,0,0,0.5);
+*/  padding: 15px;
+  color: black;
   font-size: 17px;
   cursor: pointer;
   z-index: 10;
@@ -69,7 +79,7 @@ span.btn {
 
   z-index: 1000;
   background-color: rgba(255,255,255,.9);
-  font-family: bebas neue;
+  font-family: arial;
   letter-spacing: .05em;
 }
 
@@ -91,4 +101,10 @@ span.btn {
   background-color: black;
   background-image: none;
   color: white;
+}
+
+#menuHead {
+  position: absolute;
+  display: none;
+
 }
