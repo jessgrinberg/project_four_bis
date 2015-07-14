@@ -23,13 +23,14 @@
 
 body {
 margin:0;
+overflow: hidden;
 
 } 
 
 
 .container {
-width:100%;
-height:100%;
+width:110%;
+height:110%;
 background: url("http://1vze7o2h8a2b2tyahl3i0t68.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/lacma.jpg") no-repeat center center;
 background-size:cover;
 position:absolute;
@@ -57,10 +58,11 @@ position:absolute;
   display: block;
 }
 */
+
 span.btn {
   display: inline-block;
-/*  background: rgba(0,0,0,0.5);
-*/  padding: 15px;
+ background: rgba(0,0,0,0.5);
+  padding: 15px;
   color: black;
   font-size: 17px;
   cursor: pointer;
@@ -68,6 +70,23 @@ span.btn {
   position: absolute;
   top: 50%;
   left: 50%;
+}
+
+span.glyphicon {
+  display: inline-block;
+/* background: rgba(0,0,0,0.5);
+*/  padding: 15px;
+  color: black;
+  font-size: 17px;
+  cursor: pointer;
+ /* z-index: 10;*/
+  position: absolute;
+  right: 0;
+
+}
+
+.row {
+   margin: 0 auto;
 }
 
 
