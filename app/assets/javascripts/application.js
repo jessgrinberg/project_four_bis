@@ -19,7 +19,7 @@
 
 
 $(document).ready(function(){
-
+$('#menuToggle').hide()	
 
 	$('#navTop').click(function(){
 		$('#menuToggle').slideToggle()
