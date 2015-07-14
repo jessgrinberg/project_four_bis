@@ -9,7 +9,9 @@ class MapsController < ApplicationController
   # GET /maps.json
   def index
     if params[:search].present?
-  @maps = Map.where("address ilike ?", "%#{params[:search]}%")
+  @maps = Map.where("address ilike ? ", "%#{params[:search]}%")
+
+
 else
     @maps = Map.all
         respond_to do |format|
