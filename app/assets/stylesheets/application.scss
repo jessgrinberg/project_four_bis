@@ -23,17 +23,21 @@
 
 body {
 margin:0;
-overflow: hidden;
+overflow-x: hidden;
 
 } 
 
+.address-map{
+width: 100vw;
+
+}
 
 .container {
-width:110%;
-height:110%;
+width:100vw;
+height:30em;
 background: url("http://1vze7o2h8a2b2tyahl3i0t68.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/lacma.jpg") no-repeat center center;
 background-size:cover;
-position:absolute;
+/*position:absolute;*/
 }
 
 /*#menuHead {
