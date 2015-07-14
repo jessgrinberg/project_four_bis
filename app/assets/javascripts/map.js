@@ -4,12 +4,15 @@ $(document).ready(function() {
 });
 
 
-// if (navigator.geolocation) {
-//      navigator.geolocation.getCurrentPosition(function (position) {
-//          initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-//          map.setCenter(initialLocation);
-//      });
-//  }
+ if(navigator.geolocation) {
+     navigator.geolocation.getCurrentPosition(function (position) {
+         initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+       map.setCenter(initialLocation);
+     });
+
+    // map.setCenter(initialLocation)
+
+ }
 
 // function getLocation() {
 //     if (navigator.geolocation) {
@@ -31,10 +34,12 @@ $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
         
     latitude = data.lat;
     longitude = data.lon;
-});
 
     console.log(latitude);
     console.log(longitude);
+});
+
+    
 
 /////////////////////////////////
 
@@ -110,12 +115,15 @@ function initialize_my_map() {
                 var coord = promise_result.geometry.location
 
                 // Create and place a marker
-                var marker = new google.maps.Marker({position: coord})
+                var marker = new google.maps.Marker({
+                    position: coord
+                    // icon: marker
+                })
                 marker.setMap(map)
                 markers.push(marker)
 
                 // Add the coordinates to the bounds (so we can center the map)
-                 bounds.extend(coord)
+                 // bounds.extend(coord)
 
                 // Create an info window
                 var infowindow = new google.maps.InfoWindow({
@@ -128,10 +136,15 @@ function initialize_my_map() {
             }
 
             // Center and fit the map using the bounds
-              map.fitBounds(bounds)
+              // map.fitBounds(bounds)
 
         })
 
     })
 
 }
+
+// google.maps.event.addListener(marker, 'click', function() {
+//     map.setZoom(8);
+//     map.setCenter(marker.getPosition());
+//   });

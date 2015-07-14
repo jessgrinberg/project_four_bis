@@ -18,11 +18,11 @@
 
 
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
 
-	$('#navTop').click(function(){
-		$('#menuToggle').slideToggle()
-	})
+// 	$('#navTop').click(function(){
+// 		$('#menuToggle').slideToggle()
+// 	})
 
-})
+// })
