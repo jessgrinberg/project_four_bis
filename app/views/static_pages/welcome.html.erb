@@ -30,6 +30,8 @@
     </div>
   </div>
 </header>
+
+
 <div class="row">
 <%= form_tag maps_path, :method => :get do %>
     <%= text_field_tag :search, params[:search], placeholder: "Keywords" %>
@@ -39,9 +41,13 @@
 <% end %>
 </div>
 
+<button id="show-map">
 <div class="row">
-<div id="address-map" style="width: 100%; height: 400px;"></div>
+<div id="address-map" style="width: 100vw; height: 400px;"></div>
+</div>
+</button>
 
+<div class="scroll" style="border:1px solid black;width:100%;height:100px;overflow:scroll">
     <% @maps.each do |map| %>
       <div class="row">
         <p class="col-sm-2"><strong><%= map.organization %></strong></p>
@@ -57,7 +63,7 @@
     <% end %>
 </div>
 
-
+</div>
 <!-- <div class="row">
 <h1>HOW IT WORKS?</h1>
 </div> -->
