@@ -1,6 +1,9 @@
 class StaticPagesController < ApplicationController
   def welcome
 
+ if params[:search].present?
+      @maps = Map.search params[:search]
+    else
     @maps = Map.all
         respond_to do |format|
         format.html {
@@ -9,6 +12,8 @@ class StaticPagesController < ApplicationController
         format.json {
             render json: @maps
         }
-  end
-  end
+    end
+end
+
+end
 end
