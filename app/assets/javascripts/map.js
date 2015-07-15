@@ -123,7 +123,7 @@ function initialize_my_map() {
                 markers.push(marker)
 
                 // Add the coordinates to the bounds (so we can center the map)
-                 // bounds.extend(coord)
+                  bounds.extend(coord)
 
                 // Create an info window
                 var infowindow = new google.maps.InfoWindow({
@@ -136,7 +136,7 @@ function initialize_my_map() {
             }
 
             // Center and fit the map using the bounds
-              // map.fitBounds(bounds)
+               map.fitBounds(bounds)
 
         })
 
