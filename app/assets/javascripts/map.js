@@ -127,7 +127,8 @@ function initialize_my_map() {
 
                 // Create an info window
                 var infowindow = new google.maps.InfoWindow({
-                    content: "<h1>" + results[i].organization + "</h1>" + promise_result.formatted_address 
+                    content: "<h2>" + results[i].organization 
+                    // + "</h1>" + promise_result.formatted_address 
                 })
 
                 // Open it above the marker

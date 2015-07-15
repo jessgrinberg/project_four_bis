@@ -2,21 +2,35 @@
 
 
 
-<%= link_to 'Edit', edit_map_path(@map) %> |
-<%= link_to 'Back', maps_path %>
+<hr>
 
-<div id='address-map' style="width: 100%; height: 400px;"></div>
+<div class= "col-md-6">
 
-<div class = "row">
-	
-
-<p class="col-sm-2"><strong> <%= @map.organization %></p>
-<p class="col-sm-4"><%= @map.address %></p>
-<p class="col-sm-2"><%= @map.phone %></p>
-<p class="col-sm-2"><%= mail_to @map.website %><span class="glyphicon glyphicon-envelope"></p>
+<div class="row">
+  <div class="col-sm-6 col-md-12">
+    <div class="thumbnail">
+      <img src="..." alt="...">
+      <div class="caption">
+        <h3><%= @map.organization %></h3>
+        <p><%= @map.address %></p>
+      	<p><%#= @map.website %></p>
+      	<p><%#= @map.phone %></p>
+        <p class="btn btn-primary glyphicon glyphicon-envelope" role="button"><%= mail_to @map.website %></p> 
+        <p class="btn btn-default glyphicon glyphicon-earphone" role="button"><%= @map.phone %></p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 </div>
 
 
+<div class= "col-md-6">
+<div id='address-map' style="width: 100%; height: 300px;"></div>
+</div>
 
+<div class= "row"> Gallery</div>
+
+<%#= link_to 'Edit', edit_map_path(@map) %><!--  | -->
+<%#= link_to 'Back', maps_path %>
