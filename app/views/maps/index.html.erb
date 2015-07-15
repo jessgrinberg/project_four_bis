@@ -13,28 +13,25 @@
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search ", :name => nil %>
 <% end %>
+<hr>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+   
+ 
+
+
     <% @maps.each do |map| %>
-      <tr>
-        <td><%= map.organization %></td>
-        <td><%= map.address %></td>
-        <td><%= link_to 'Show', map %></td>
-        <td><%= link_to 'Edit', edit_map_path(map) %></td>
-        <td><%= link_to 'Destroy', map, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="row">
+        <p class="col-sm-2"><strong><%= map.organization %></strong></p>
+        <p class="col-sm-4"><%= map.address %></p>
+        <p class="col-sm-1"><%= map.phone %></p>
+        <p class="col-sm-2"><%= map.website %></p>
+        <p class="col-sm-1"><%= link_to 'Show', map %></p>
+       <p class="col-sm-1"><%= link_to 'Edit', edit_map_path(map) %></p>
+        <p class="col-sm-1"><%= link_to 'Destroy', map, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </div>
     <% end %>
-  </tbody>
-</table>
+
 
 <br>
 
