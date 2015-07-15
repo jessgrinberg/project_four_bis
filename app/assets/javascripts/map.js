@@ -60,7 +60,8 @@ function initialize_my_map() {
     var geocoder = new google.maps.Geocoder()
 
     // Get the page's marker data from the JSON API
-    var url = window.location.origin + window.location.pathname + ".json"
+    var url = window.location.origin + "/maps.json"
+    // var url = window.location.origin + window.location.pathname + ".json"
 
     // Ajax the data URL (this retrieves the contents of that JSON url above)
     $.get(url, function(results){
