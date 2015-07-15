@@ -40,8 +40,11 @@ width: 100vw;
 .container {
 width:110vw;
 height:30em;
-background: url("http://1vze7o2h8a2b2tyahl3i0t68.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/lacma.jpg") no-repeat center center;
+
+/*background: url("http://1vze7o2h8a2b2tyahl3i0t68.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/lacma.jpg") no-repeat center center;
+*/background: url('bake1.jpg');
 background-size:cover;
+
 /*position:absolute;*/
 margin-left: -10%;
 margin-top: 4%;
@@ -117,6 +120,7 @@ span.glyphicon {
 }
 
 
+
 #menuToggle {
   display: none;
   width: 100vw;
@@ -141,3 +145,10 @@ span.glyphicon {
   display: none;
 
 }*/
+/*#menuToggle {
+  z-index: 10;
+}*/
+
+.footer {
+
+}
