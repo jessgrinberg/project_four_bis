@@ -155,16 +155,20 @@ span.glyphicon {
 }
 
 .scroll {
-  border:2px solid black;
-
-  width:50%;
+  border:2px solid white;
+  margin: 0 auto;
+  width:100%;
   height:400px;
   overflow:scroll;
-  margin-left: 300px;
-}
+/*  margin-left: 300px;
+*/}
 
 .form-search {
    position:relative;
     top: 50%;
     left: 33%; 
+}
+
+.mapping {
+  margin: 0 auto;
 }
