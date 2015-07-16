@@ -14,11 +14,11 @@
   <div class ="row" id="menuToggle">
           <% if user_signed_in? %>
             <div class="row">Hi <%= current_user.email %></div>
-            <div class="row" id="bakers"><h4><%= link_to "BAKERS", maps_path %></h4></div>
-            <div class="row" id="add"><%= link_to 'ADD YOUR BAKERY', new_map_path %></div>
-            <div class="row" id= "out"><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %></div> 
+            <div class="row" id="bakers"><h5><%= link_to "BAKERS", maps_path %></h5></div>
+            <div class="row" id="add"><h5><%= link_to 'ADD YOUR BAKERY', new_map_path %></h5></div>
+            <div class="row" id= "out"><h5><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %></h5></div> 
             <% else %>
-           <div class="row" id="in"><%= link_to 'LOG IN', new_user_session_path %></div>
+           <div class="row" id="in"><h5><%= link_to 'LOG IN', new_user_session_path %><h5></div>
            <% end %>
         </div>
     </nav>    
