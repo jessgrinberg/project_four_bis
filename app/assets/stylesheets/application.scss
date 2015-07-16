@@ -20,7 +20,9 @@
   height: 100%;
   background-color: #333;
 }*/
-
+html {
+  font-family: Helvetica Neue;
+}
 
 header {
   text-align: center;
@@ -276,3 +278,57 @@ ul {
   box-sizing: border-box;
 }
 
+.row a{
+  text-decoration: none;
+  color: white;
+  letter-spacing: 5px;
+  line-height: 3;
+
+}
+.row a:hover {
+  text-decoration: none;
+}
+
+#bakers{
+-moz-transition:-moz-transform 0.5s ease-in; 
+-webkit-transition:-webkit-transform 0.5s ease-in; 
+-o-transition:-o-transform 0.5s ease-in;
+}
+#bakers:hover{
+-moz-transform:scale(1.5); 
+-webkit-transform:scale(1.5);
+-o-transform:scale(1.5);
+}
+
+#out{
+-moz-transition:-moz-transform 0.5s ease-in; 
+-webkit-transition:-webkit-transform 0.5s ease-in; 
+-o-transition:-o-transform 0.5s ease-in;
+}
+#out:hover{
+-moz-transform:scale(1.5); 
+-webkit-transform:scale(1.5);
+-o-transform:scale(1.5);
+}
+
+#add{
+-moz-transition:-moz-transform 0.5s ease-in; 
+-webkit-transition:-webkit-transform 0.5s ease-in; 
+-o-transition:-o-transform 0.5s ease-in;
+}
+#add:hover{
+-moz-transform:scale(1.5); 
+-webkit-transform:scale(1.5);
+-o-transform:scale(1.5);
+}
+
+#in{
+-moz-transition:-moz-transform 0.5s ease-in; 
+-webkit-transition:-webkit-transform 0.5s ease-in; 
+-o-transition:-o-transform 0.5s ease-in;
+}
+#in:hover{
+-moz-transform:scale(1.5); 
+-webkit-transform:scale(1.5);
+-o-transform:scale(1.5);
+}
