@@ -36,6 +36,10 @@ $('#menuToggle').hide()
 
 // })
 
+
+
+
+
 x = 0;
 $(document).ready(function(){
     $("scroll").scroll(function(){
