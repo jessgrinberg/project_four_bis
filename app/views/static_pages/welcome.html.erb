@@ -31,41 +31,40 @@
   </div>
 </header>
 
+<!-- <div class="row">
 
-
-<div class="row">
-
-<div class="form-search">
-<%= form_tag maps_path, :method => :get do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Keywords" %>
+<div class="form-search"> -->
+<%#= form_tag maps_path, :method => :get do %>
+    <%#= text_field_tag :search, params[:search], placeholder: "Keywords" %>
     <%#= text_field_tag :location, params[:address], placeholder: 'address'  %>
     <%#= number_field_tag :range, params[:range], placeholder: 'Distance in Miles' %>
-    <%= submit_tag "Search ", :name => nil %>
-<% end %>
+    <%#= submit_tag "Search ", :name => nil %>
+<%# end %>
 
-</div>
-</div>
+<!-- </div>
+</div> -->
 
 
 <!-- <button id="show-map"> -->
 
-<div class="row mapping">
+<!-- <div class="row mapping">
   <div class=" col-sm-6  col-xs-offset-3 col-xs-8 ">
     <div id="address-map" style="width: 100%; height: 400px; "></div>
-  </div>
+  </div> -->
 
 <!-- </button> -->
 
 
-</div>
+
 <!-- <div class="row"> -->
-<hr>
- <div class="col-sm-6 col-xs-offset-3 col-xs-8 ">
-  <div class="scroll" >
+
+<div = "row">
+<!--   <div class=" col-sm-6  col-xs-offset-3 col-xs-8 ">
+ --> <div class="col-sm-8 col-xs-offset-2 col-xs-8 ">
+
     <% @maps.each do |map| %>
   <!--     <div class="row"> -->
-        <p><strong><%= map.organization %></strong> 
-          <%= map.address %></p>
+        <strong><%= map.organization %> </strong><%= map.address.split.map(&:capitalize).join(' ') %> 
      <!--    <p class="col-sm-1"><%#= map.phone %></p>
         <p class="col-sm-2"><%#= map.website %></p> -->
       <!--   <p class="col-sm-1"><%#= link_to 'Details', map %></p>
@@ -73,7 +72,7 @@
         <p class="col-sm-1"><%#= link_to 'Destroy', map, method: :delete, data: { confirm: 'Are you sure?' } %></p> -->
     <% end %>
   <!--   </div> -->
-</div>
+
 </div>
 </div>
 

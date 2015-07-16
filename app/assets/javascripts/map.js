@@ -1,18 +1,16 @@
 $(document).ready(function() {
-
-  console.log("hello there jess")
+    console.log("hello there jess")
 });
 
 
- if(navigator.geolocation) {
-     navigator.geolocation.getCurrentPosition(function (position) {
-         initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-       map.setCenter(initialLocation);
-     });
-
+if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+        initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+       //map.setCenter(initialLocation);
+    });
     // map.setCenter(initialLocation)
 
- }
+}
 
 // function getLocation() {
 //     if (navigator.geolocation) {
@@ -48,6 +46,8 @@ google.maps.event.addDomListener(window, 'load', initialize_my_map)
 google.maps.event.addDomListener(window, 'page:load', initialize_my_map)
 console.log("work?")
 // Define a function that should be ran on load (yay function hoisting)
+
+
 function initialize_my_map() {
 
     // Find the map DIV (if it exists)
@@ -88,21 +88,21 @@ function initialize_my_map() {
 
         }
 
-   // Dispatch the promises
+    // Dispatch the promises
         Promise.all(geo_promises).then(function(promise_results){
             
             // Create a map
             // these are the map options
             var mapProps = {
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
-                zoom: 10,
+                zoom: 4,
                 center: new google.maps.LatLng(34.0194,-118.4912)
                  // center: {  -10.397,100.644}
             }
             var map = new google.maps.Map(el, mapProps)
 
             // Bounds are cool because they center our map for us
-             var bounds = new google.maps.LatLngBounds()
+            var bounds = new google.maps.LatLngBounds()
 
             // Track an array of our markers
             var markers = []
