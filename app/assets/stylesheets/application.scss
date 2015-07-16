@@ -29,6 +29,7 @@ header {
 body {
 margin:0;
 overflow-x: hidden;
+/*background-color: black;*/
 
 } 
 
@@ -39,7 +40,7 @@ height: 400px;
 }
 
 .container {
-width:110vw;
+width:120vw;
 height:30em;
 
 /*background: url("http://1vze7o2h8a2b2tyahl3i0t68.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/lacma.jpg") no-repeat center center;
@@ -107,6 +108,9 @@ span.glyphicon {
    margin: 0 auto;
 }
 
+.menu {
+
+}
 
 /*#navTop {
   position: fixed;
@@ -151,12 +155,18 @@ span.glyphicon {
 }*/
 
 .footer {
-
+background-color: #090021;
+margin-top: 50px;
 }
 
+.list {
+padding-top: 50px;
+
+}
 .scroll {
   border:2px solid white;
   margin: 0 auto;
+padding-top: 10em;
   width:100%;
   height:400px;
   overflow:scroll;
@@ -170,5 +180,7 @@ span.glyphicon {
 }
 
 .mapping {
+ padding-top: 50px;
   margin: 0 auto;
 }
+
