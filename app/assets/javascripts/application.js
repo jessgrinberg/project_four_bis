@@ -42,3 +42,7 @@ $(document).ready(function(){
         $("span").text( x+= 1);
     });
 });
+
+// $(document).ready(function() {
+//     $(".fancy_title").lettering();
+//   });
