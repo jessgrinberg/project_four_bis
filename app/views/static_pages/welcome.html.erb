@@ -65,10 +65,10 @@
         <li class="store" id="store1"></li>
           <div class="store">
             <% @maps.each do |map| %>
-            <div class ="title"><%= map.organization %></div>
+            <div class ="title"><h4><%= map.organization.capitalize %></h4></div>
              <div class="address"><%= map.address.split.map(&:capitalize).join(' ') %></div>
               <div class="phone"><%= map.phone %></div>
-                <div class="phone"><%= map.website %></div>
+                <div class="website"><%= mail_to map.website %></div>
                 <hr>
                 <%end%>
       </ul>      
