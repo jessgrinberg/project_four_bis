@@ -8,14 +8,10 @@
 <nav> 
       <h3 id="navTop">
       MENU
-
-
-
-
       <span class="glyphicon glyphicon-align-justify"></span></h3>
 <!--  <h3 id="navTop"></h3>  -->
 
-  <div id="menuToggle">
+  <div class ="row" id="menuToggle">
           <% if user_signed_in? %>
             <div class="row"><strong>Hi <%= current_user.email %></strong></div>
             <div class="row"><%= link_to "Bakers", maps_path %></div>
@@ -59,8 +55,11 @@
 <!-- </button> -->
 
 <div class="row mapping">
-  <!-- <div class="storelocator-panel"> -->
-    <!-- <form class="storelocator-filter"></form> -->
+  <div class="storelocator-panel">
+    <form class="storelocator-filter">
+      
+
+    </form>
  <!--    <div class="scroll"> -->
       <ul class="store-list ">
         <li class="store" id="store1"></li>
@@ -73,7 +72,7 @@
                 <hr>
                 <%end%>
       </ul>      
-<!--   </div> -->
+  </div>
 
   <div class="col-sm-8 hidden-xs">
     <div id="address-map" style=" position: absolute; left: 0px; top: 0px; z-index: 2; width: 726px; height: 726px ;"></div>
