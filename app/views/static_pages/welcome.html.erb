@@ -3,7 +3,7 @@
 <header>
 
 <div class="row menu">
- <span  href="#" class="btn"><h1>Got Bread?</h1></span>
+ <span class="btn" id="name-blur"><h1>Got Bread?</h1></span>
 
 <nav> 
       <h3 id="navTop">
@@ -25,8 +25,10 @@
 </div> 
   <div class="container">
     <div class="row">
-      <h1>HomeMade Bread </h1>
-      <h2>Subscribe to get weekly fresh home made bread nearby</h2>
+      <div id="bread"><h1>HomeMade Bread</h1>
+      </div>
+      <div id="bread2"><h2>Subscribe to get weekly fresh home made bread nearby</h2>
+      </div>
     </div>
   </div>
 </header>
@@ -53,7 +55,7 @@
   </div> -->
 
 <!-- </button> -->
-
+<div class="map-container">
 <div class="row mapping">
   <div class="storelocator-panel">
     <form class="storelocator-filter">
@@ -61,9 +63,9 @@
 
     </form>
  <!--    <div class="scroll"> -->
-      <ul class="store-list ">
-        <li class="store" id="store1"></li>
-          <div class="store">
+      <div class="store-list ">
+        <!-- <li class="store" id="store1"></li> -->
+          <ul class="store">
             <% @maps.each do |map| %>
             <div class ="title"><h4><%= map.organization.capitalize %></h4></div>
              <div class="address"><%= map.address.split.map(&:capitalize).join(' ') %></div>
@@ -71,6 +73,7 @@
                 <div class="website"><%= mail_to map.website %></div>
                 <hr>
                 <%end%>
+                </div>
       </ul>      
   </div>
 
@@ -79,6 +82,7 @@
   </div> 
 
   </div> 
+  </div>
 
 <!-- <div class="row"> -->
 

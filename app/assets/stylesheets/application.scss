@@ -176,6 +176,7 @@ span.glyphicon {
 background-color: black;
 margin-top: 50px;
 color: white;
+margin: 0 auto;
 }
 
 .list {
@@ -228,6 +229,8 @@ padding-top: 10em;
   border: 1px solid #e0e0e0;
   border-right: none;
   border-left: none;
+  border-top: none;
+  border-bottom: none;
   height: 726px;
   border-right: none;
   float: left;
@@ -238,6 +241,7 @@ padding-top: 10em;
   background: #f8f8f8;
   pointer-events: none;
   min-height: 200px; 
+
 
 
 }
@@ -334,6 +338,35 @@ ul {
 -webkit-transform:scale(1.5);
 -o-transform:scale(1.5);
 }
-.website {
-  color: pink
+.website a {
+  text-decoration: none;
+  color: rgb(178, 119, 86);
+  letter-spacing: 5px;
+  line-height: 3;
+}
+
+#bread {
+    margin-top: 50px;
+  margin-bottom: 50px;
+  color: black;
+}
+
+#bread2 {
+  color: black;
+}
+
+#name-blur {
+  color: #CA9C82;
+  border-radius: 10px;
+}
+
+
+#name-blur:hover {
+  color: rgb(178, 119, 86);
+}
+
+.map-container{
+  background-color: rgba(248, 248, 248, 1);
+  padding-bottom: 50px;
+  padding-top: 20px;
 }

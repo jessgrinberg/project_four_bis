@@ -42,7 +42,7 @@ $('#menuToggle').hide()
 
 x = 0;
 $(document).ready(function(){
-    $("scroll").scroll(function(){
+    $("store-list").scroll(function(){
         $("span").text( x+= 1);
     });
 });
