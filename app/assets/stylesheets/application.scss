@@ -24,27 +24,42 @@
 
 header {
   text-align: center;
+  color: white;
+  background-color: black;
 }
 
 body {
 margin:0;
 overflow-x: hidden;
 /*background-color: black;*/
-
+  color: white;
+/*  background-color: black;*/
 } 
 
+.menu {
+    color: white;
+  background-color: black;
+}
 .address-map{
 width: 50vw;
 height: 400px;
 
 }
 
+.glyphicon-align-justify:before {
+  color: white;
+}
+h3, .h3 {
+   letter-spacing: 18px;
+   padding: 25px;
+}
+
 .container {
-width:120vw;
-height:30em;
+width:125vw;
+height:40em;
 
 /*background: url("http://1vze7o2h8a2b2tyahl3i0t68.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/lacma.jpg") no-repeat center center;
-*/background: url('bake1.jpg');
+*/background: url('http://www.pariszigzag.fr/wp-content/uploads/2014/08/meilleur-pain-baguette-boulangerie-paris.jpg');
 background-size:cover;
 
 /*position:absolute;*/
@@ -155,7 +170,7 @@ span.glyphicon {
 }*/
 
 .footer {
-background-color: #090021;
+background-color: black;
 margin-top: 50px;
 }
 
