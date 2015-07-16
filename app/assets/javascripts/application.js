@@ -26,3 +26,19 @@ $('#menuToggle').hide()
 	})
 
 })
+
+// $(document).ready(function(){
+// $('#address-map').hide()	
+
+// 	$('#show-map').click(function(){
+// 		$('#address-map').slideToggle()
+// 	})
+
+// })
+
+x = 0;
+$(document).ready(function(){
+    $("scroll").scroll(function(){
+        $("span").text( x+= 1);
+    });
+});

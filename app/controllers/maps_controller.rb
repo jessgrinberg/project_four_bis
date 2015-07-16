@@ -2,7 +2,7 @@ class MapsController < ApplicationController
   before_action :set_map, only: [:show, :edit, :update, :destroy]
 
   def redir
-    redirect_to maps_url
+    redirect_to root_path
   end
 
   # GET /maps
@@ -15,19 +15,20 @@ class MapsController < ApplicationController
 # else
 
 
- if params[:search].present?
+  if params[:search].present?
       @maps = Map.search params[:search]
-    else
+     
+  else
     @maps = Map.all
         respond_to do |format|
         format.html {
-            render
+            render 
         }
         format.json {
             render json: @maps
         }
     end
-end
+  end
 end
 
   # end

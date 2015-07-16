@@ -16,6 +16,12 @@
 
 <div id="address-map" style="width: 100%; height: 400px;"></div>
 
+
+<hr>
+
+
+
+<div class ="scroll">
     <% @maps.each do |map| %>
       <div class="row">
         <p class="col-sm-2"><strong><%= map.organization %></strong></p>
@@ -29,6 +35,8 @@
         <p class="col-sm-1"><%= link_to 'Destroy', map, method: :delete, data: { confirm: 'Are you sure?' } %></p>
       </div>
     <% end %>
+<div>
+
 
 
 <br>

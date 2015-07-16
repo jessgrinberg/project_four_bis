@@ -12,7 +12,7 @@
       <img src="..." alt="...">
       <div class="caption">
         <h3><%= @map.organization %></h3>
-        <p><%= @map.address %></p>
+        <p><%= @map.address.split.map(&:capitalize).join(' ') %></p>
       	<p><%#= @map.website %></p>
       	<p><%#= @map.phone %></p>
         <p class="btn btn-primary glyphicon glyphicon-envelope" role="button"><%= mail_to @map.website %></p> 
