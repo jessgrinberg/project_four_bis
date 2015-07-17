@@ -119,8 +119,10 @@ function initialize_my_map() {
 
                 // Create and place a marker
                 var marker = new google.maps.Marker({
-                    position: coord
-                    // icon: marker
+                    position: coord,
+                    icon: new google.maps.MarkerImage('assets/gotbread.png'
+                        // new google.maps.Size(24, 24)
+                        )
                 })
                 marker.setMap(map)
                 markers.push(marker)

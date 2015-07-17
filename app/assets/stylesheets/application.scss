@@ -94,9 +94,9 @@ border-color: black;
 }
 */
 
-/*span.btn {
+span.btn {
   display: inline-block;
-  background: rgba(0,0,0,0.5);
+/*  background: rgba(0,0,0,0.5);*/
   padding: 15px;
   color: black;
   font-size: 17px;
@@ -107,7 +107,7 @@ border-color: black;
   left: 32.5%;
   margin: 0 auto;
   width: 35%;
-}*/
+}
 
 span.glyphicon {
   display: inline-block;
@@ -126,9 +126,7 @@ span.glyphicon {
    margin: 0 auto;
 }
 
-.menu {
 
-}
 
 /*#navTop {
   position: fixed;
@@ -222,6 +220,9 @@ padding-top: 10em;
   z-index: -10000000;
 }
 
+h3.navTop {
+   cursor: pointer;
+}
 
 /*ul, menu, dir {
   display: block;
@@ -379,6 +380,10 @@ ul {
 #name-blur {
   color: #CA9C82;
   border-radius: 10px;
+/*  top:20px;
+  position: absolute;
+  margin: 0 auto;*/
+
 }
 
 
