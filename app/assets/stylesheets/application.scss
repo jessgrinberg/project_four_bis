@@ -20,7 +20,9 @@
   height: 100%;
   background-color: #333;
 }*/
-
+html {
+  font-family: Helvetica Neue;
+}
 
 header {
   text-align: center;
@@ -53,6 +55,7 @@ h3, .h3 {
    letter-spacing: 18px;
    padding: 25px;
 }
+
 
 .container {
 width:125vw;
@@ -93,7 +96,7 @@ border-color: black;
 
 span.btn {
   display: inline-block;
-  background: rgba(0,0,0,0.5);
+/*  background: rgba(0,0,0,0.5);*/
   padding: 15px;
   color: black;
   font-size: 17px;
@@ -123,9 +126,7 @@ span.glyphicon {
    margin: 0 auto;
 }
 
-.menu {
 
-}
 
 /*#navTop {
   position: fixed;
@@ -173,22 +174,39 @@ span.glyphicon {
 background-color: black;
 margin-top: 50px;
 color: white;
+margin: 0 auto;
 }
 
 .list {
 padding-top: 50px;
 
 }
-/*.scroll {
+.scroll {
   border:2px solid white;
   margin: 0 auto;
 padding-top: 10em;
   width:100%;
   height:400px;
   overflow:scroll;
+}
 
-/*  margin-left: 300px;
-*//*}*/
+.storelocator-panel {
+  /*border: 2px solid black;*/
+    margin: 0 auto;
+padding-top: 10em;
+/*  width:100%;*/
+  height:400px;
+  overflow:scroll;
+}
+.store-locator{
+  border:2px solid white;
+  margin: 0 auto;
+padding-top: 10em;
+  width:100%;
+  height:415px;
+  overflow:scroll;
+
+}
 
 .form-search {
    position:relative;
@@ -199,8 +217,12 @@ padding-top: 10em;
 .mapping {
  padding-top: 50px;
   margin: 0 170px;
+  z-index: -10000000;
 }
 
+h3.navTop {
+   cursor: pointer;
+}
 
 /*ul, menu, dir {
   display: block;
@@ -220,11 +242,13 @@ padding-top: 10em;
 
 /*@media (min-width: 768px)*/
 .store-list {
-  width: 33.33333333%;
+  width: 100%;
   position: relative;
   border: 1px solid #e0e0e0;
   border-right: none;
   border-left: none;
+  border-top: none;
+  border-bottom: none;
   height: 726px;
   border-right: none;
   float: left;
@@ -233,8 +257,9 @@ padding-top: 10em;
   left: 4px;
   margin: 0 -4px;
   background: #f8f8f8;
-  pointer-events: none;
+  /*pointer-events: none;*/
   min-height: 200px; 
+
 
 
 }
@@ -256,12 +281,14 @@ ul {
   padding: 0;
   display: block;
   font-size: 12px;
+  color: black
 }
 
 .store {
  /* border-bottom: 1px solid #e0e0e0;*/
   padding: 8px 0 20px 8px;
   position: relative;
+    z-index: 10000000;
 }
 .store:last-child {
   border: none;
@@ -274,5 +301,99 @@ ul {
 
 .storelocator-panel {
   box-sizing: border-box;
+  height: 415px;
+  padding: 0px;
 }
 
+.row a{
+  text-decoration: none;
+  color: white;
+  letter-spacing: 5px;
+  line-height: 3;
+
+}
+.row a:hover {
+  text-decoration: none;
+}
+
+#bakers{
+-moz-transition:-moz-transform 0.5s ease-in; 
+-webkit-transition:-webkit-transform 0.5s ease-in; 
+-o-transition:-o-transform 0.5s ease-in;
+}
+#bakers:hover{
+-moz-transform:scale(1.5); 
+-webkit-transform:scale(1.5);
+-o-transform:scale(1.5);
+}
+
+#out{
+-moz-transition:-moz-transform 0.5s ease-in; 
+-webkit-transition:-webkit-transform 0.5s ease-in; 
+-o-transition:-o-transform 0.5s ease-in;
+}
+#out:hover{
+-moz-transform:scale(1.5); 
+-webkit-transform:scale(1.5);
+-o-transform:scale(1.5);
+}
+
+#add{
+-moz-transition:-moz-transform 0.5s ease-in; 
+-webkit-transition:-webkit-transform 0.5s ease-in; 
+-o-transition:-o-transform 0.5s ease-in;
+}
+#add:hover{
+-moz-transform:scale(1.5); 
+-webkit-transform:scale(1.5);
+-o-transform:scale(1.5);
+}
+
+#in{
+-moz-transition:-moz-transform 0.5s ease-in; 
+-webkit-transition:-webkit-transform 0.5s ease-in; 
+-o-transition:-o-transform 0.5s ease-in;
+}
+#in:hover{
+-moz-transform:scale(1.5); 
+-webkit-transform:scale(1.5);
+-o-transform:scale(1.5);
+}
+.website a {
+  text-decoration: none;
+  color: rgb(178, 119, 86);
+  letter-spacing: 5px;
+  line-height: 3;
+  z-index: 10000000;
+}
+
+#bread {
+    margin-top: 50px;
+  margin-bottom: 50px;
+  color: black;
+}
+
+#bread2 {
+  color: black;
+}
+
+#name-blur {
+  color: #CA9C82;
+  border-radius: 10px;
+/*  top:20px;
+  position: absolute;
+  margin: 0 auto;*/
+
+}
+
+
+#name-blur:hover {
+  color: rgb(178, 119, 86);
+}
+
+.map-container{
+  background-color: rgba(248, 248, 248, 1);
+  padding-bottom: 50px;
+  padding-top: 20px;
+  z-index: -10000000;
+}

@@ -3,9 +3,11 @@
 <header>
 
 <div class="row menu">
- <span  href="#" class="btn"><h1>Got Bread?</h1></span>
+ <span class="btn animated infinite" id="name-blur"><h1 class="animated infinite swing" id="swing">Got Bread?</h1></span>
+<!-- <h1 class="animated infinite bounce">Example</h1>
+ --><nav> 
 
-<nav> 
+
       <h3 id="navTop">
       MENU
       <span class="glyphicon glyphicon-align-justify"></span></h3>
@@ -13,20 +15,22 @@
 
   <div class ="row" id="menuToggle">
           <% if user_signed_in? %>
-            <div class="row"><strong>Hi <%= current_user.email %></strong></div>
-            <div class="row"><%= link_to "Bakers", maps_path %></div>
-            <div class="row"><%= link_to 'Add your Bakery', new_map_path %></div>
-            <div class="row"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></div> 
+            <div class="row">Hi <%= current_user.email %></div>
+            <div class="row" id="bakers"><h5><%= link_to "BAKERS", maps_path %></h5></div>
+            <div class="row" id="add"><h5><%= link_to 'ADD YOUR BAKERY', new_map_path %></h5></div>
+            <div class="row" id= "out"><h5><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %></h5></div> 
             <% else %>
-           <div class="row"><%= link_to 'Log In', new_user_session_path %></div>
+           <div class="row" id="in"><h5><%= link_to 'LOG IN', new_user_session_path %><h5></div>
            <% end %>
         </div>
     </nav>    
 </div> 
   <div class="container">
     <div class="row">
-      <h1>HomeMade Bread </h1>
-      <h2>Subscribe to get weekly fresh home made bread nearby</h2>
+      <div id="bread"><h1>HomeMade Bread</h1>
+      </div>
+      <div id="bread2"><h2>Subscribe to get weekly fresh home made bread nearby</h2>
+      </div>
     </div>
   </div>
 </header>
@@ -53,32 +57,47 @@
   </div> -->
 
 <!-- </button> -->
-
+<div class="map-container">
 <div class="row mapping">
-  <div class="storelocator-panel">
-    <form class="storelocator-filter">
-      
+   <form class="storelocator-filter">
+      <%= form_tag maps_path, :method => :get do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Keywords" %>
+    <%#= text_field_tag :location, params[:address], placeholder: 'address'  %>
+    <%#= number_field_tag :range, params[:range], placeholder: 'Distance in Miles' %>
+    <%= submit_tag "Search ", :name => nil %>
+<% end %>
 
     </form>
+  <div class=" col-sm-4 storelocator-panel">
+ 
+
+
  <!--    <div class="scroll"> -->
-      <ul class="store-list ">
-        <li class="store" id="store1"></li>
-          <div class="store">
+      <div class="store-list">
+        <!-- <li class="store" id="store1"></li> -->
+          <ul class="store">
             <% @maps.each do |map| %>
-            <div class ="title"><%= map.organization %></div>
+            <li class="store" id="store1">
+            <li class ="title"><h4><%= map.organization.capitalize %></h4></li>
              <div class="address"><%= map.address.split.map(&:capitalize).join(' ') %></div>
               <div class="phone"><%= map.phone %></div>
-                <div class="phone"><%= map.website %></div>
+                <li class="website"><%= mail_to map.website %></li>
+                </li>
                 <hr>
                 <%end%>
+                </div>
       </ul>      
   </div>
 
-  <div class="col-sm-8 hidden-xs">
-    <div id="address-map" style=" position: absolute; left: 0px; top: 0px; z-index: 2; width: 726px; height: 726px ;"></div>
+  <div class="col-sm-8 ">
+ <!--    <div id="address-map" style=" position: absolute; left: 0px; top: 0px; width: 400px; height: 726px ;"></div> -->
+ <div id="address-map" style=" position: absolute; left: 0px; top: 0px; width: 101%; height: 414px; transform: translateZ(0px); background-color: rgb(229, 227, 223);"></div>
   </div> 
 
   </div> 
+  </div>
+
+
 
 <!-- <div class="row"> -->
 
