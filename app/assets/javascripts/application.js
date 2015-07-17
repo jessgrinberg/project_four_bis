@@ -27,6 +27,19 @@ $('#menuToggle').hide()
 
 })
 
+// $('#name-blur').addClass('animated bounceOutLeft');
+
+
+
+// $(document).onmouseover(function(){
+// $('#swing').addClass('animated infinite bounce')
+// })
+
+// $('#swing').mouseover(function(){
+// 	console.log("BOUNCE?")
+// 	$(this).addClass('animated infinite bounce')
+// })
+
 // $(document).ready(function(){
 // $('#address-map').hide()	
 
