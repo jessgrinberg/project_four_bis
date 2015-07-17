@@ -39,6 +39,13 @@ $('#menuToggle').hide()
 
 
 
+x = 0;
+$(document).ready(function(){
+    $("storelocator-panel").scroll(function(){
+        $("span").text( x+= 1);
+    });
+});
+
 
 x = 0;
 $(document).ready(function(){
