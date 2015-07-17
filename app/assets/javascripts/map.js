@@ -32,6 +32,7 @@ $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
         
     latitude = data.lat;
     longitude = data.lon;
+    city = data.city;
 
     console.log(latitude);
     console.log(longitude);
@@ -96,7 +97,8 @@ function initialize_my_map() {
             var mapProps = {
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
                 zoom: 4,
-                center: new google.maps.LatLng(34.0194,-118.4912)
+                // center: new google.maps.data.city
+                 center: new google.maps.LatLng(34.0194,-118.4912)
                  // center: {  -10.397,100.644}
             }
             var map = new google.maps.Map(el, mapProps)
@@ -126,11 +128,21 @@ function initialize_my_map() {
                 // Add the coordinates to the bounds (so we can center the map)
                   bounds.extend(coord)
 
-                // Create an info window
+                //Create an info window
                 var infowindow = new google.maps.InfoWindow({
-                    content: "<h2>" + results[i].organization 
+                    content: results[i].organization 
                     // + "</h1>" + promise_result.formatted_address 
                 })
+// var infowindow = new google.maps.InfoWindow({
+//   content:"<h2>" + results[i].organization 
+//   });
+
+// google.maps.event.addListener(marker, 'click', function() {
+//   infowindow.open(map,marker);
+//   });
+// }
+
+
 
                 // Open it above the marker
                 infowindow.open(map, markers[i])
