@@ -64,7 +64,7 @@
     <%= text_field_tag :search, params[:search], placeholder: "Keywords" %>
     <%#= text_field_tag :location, params[:address], placeholder: 'address'  %>
     <%#= number_field_tag :range, params[:range], placeholder: 'Distance in Miles' %>
-    <%= submit_tag "Search ", :name => nil %>
+    <div id="press"> <%= submit_tag "Search ", :name => nil %></div>
 <% end %>
 
     </form>
@@ -79,8 +79,8 @@
             <% @maps.each do |map| %>
             <li class="store" id="store1">
             <li class ="title"><h4><%= map.organization.capitalize %></h4></li>
-             <div class="address"><%= map.address.split.map(&:capitalize).join(' ') %></div>
-              <div class="phone"><%= map.phone %></div>
+             <li class="address"><%= map.address.split.map(&:capitalize).join(' ') %></li>
+              <li class="phone"><%= map.phone %></li>
                 <li class="website"><%= mail_to map.website %></li>
                 </li>
                 <hr>
