@@ -174,7 +174,9 @@ span.glyphicon {
 background-color: black;
 margin-top: 50px;
 color: white;
-margin: 0 auto;
+/*margin: 0 auto;*/
+margin-top: 50px;
+padding-bottom: 70px;
 }
 
 .list {
@@ -308,6 +310,10 @@ ul {
   padding: 0px;
 }
 
+.storelocator-filter {
+  margin-bottom: 15px;
+}
+
 .row a{
   text-decoration: none;
   color: white;
@@ -411,16 +417,24 @@ ul {
   letter-spacing: 2px;
 }
 
-#search {
-      width: 63.20em;
-      padding: 15px;
-}
-
 #press {
-        width: 63.20em;
+       width: 100%;
+       padding-top: 10px;
+       background-color: black;
 
 }
 
-input[type] {
-   width: 63.20em;
+/*#search {
+  width: 100%;
+}*/
+input {
+  width: 101%;
+  padding: 20px;
+  background-color: #A55D43;
+  border:0;
+
+}
+
+input[type="submit"] {
+color: #F8F8F8;
 }
