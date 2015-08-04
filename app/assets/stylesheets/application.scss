@@ -16,10 +16,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/*html, body {
-  height: 100%;
-  background-color: #333;
-}*/
 html {
   font-family: Helvetica Neue;
 }
@@ -31,11 +27,8 @@ header {
 }
 
 body {
-margin:0;
-overflow-x: hidden;
-/*background-color: black;*/
-/*  color: white;*/
-/*  background-color: black;*/
+  margin:0;
+  overflow-x: hidden;
 } 
 
 .menu {
@@ -45,12 +38,12 @@ overflow-x: hidden;
 .address-map{
 width: 50vw;
 height: 400px;
-
 }
 
 .glyphicon-align-justify:before {
   color: white;
 }
+
 h3, .h3 {
    letter-spacing: 18px;
    padding: 25px;
@@ -60,43 +53,15 @@ h3, .h3 {
 .pic {
 width:110vw;
 height:50em;
-
-/*background: url("http://1vze7o2h8a2b2tyahl3i0t68.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/lacma.jpg") no-repeat center center;
-*/background: url('http://www.pariszigzag.fr/wp-content/uploads/2014/08/meilleur-pain-baguette-boulangerie-paris.jpg');
+background: url('http://www.pariszigzag.fr/wp-content/uploads/2014/08/meilleur-pain-baguette-boulangerie-paris.jpg');
 background-size:cover;
-
-/*position:absolute;*/
 margin-left: -10%;
-/*margin-top: 4%;*/
 border-color: black;
 }
 
-/*#menuHead {
-  position: absolute;
-  display: none;
-
-}
-
-.article{
-  color: white;
-}*/
-/*article {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: white;
-  z-index: 1;
-  width: 600px;
-  height: 200px;
-  margin: -100px 0 0 -300px;
-  text-align: center;
-  display: block;
-}
-*/
 
 span.btn {
   display: inline-block;
-/*  background: rgba(0,0,0,0.5);*/
   padding: 15px;
   color: black;
   font-size: 17px;
@@ -111,8 +76,7 @@ span.btn {
 
 span.glyphicon {
   display: inline-block;
-/* background: rgba(0,0,0,0.5);
-*/  padding: 15px;
+  padding: 15px;
   color: black;
   font-size: 17px;
   cursor: pointer;
@@ -126,56 +90,13 @@ span.glyphicon {
    margin: 0 auto;
 }
 
-
-
-/*#navTop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: .25em .5em 0;
-
-  z-index: 1000;
-  background-color: rgba(255,255,255,.9);
-  font-family: arial;
-  letter-spacing: .05em;
-}
-
-
-
-#menuToggle {
-  display: none;
-  width: 100vw;
-  z-index: 2000;
-  text-align: right;
-  padding-right: 2.5em;
-}
-
-#menuToggle .row {
-  margin: 0;
-  padding-right: 1.5em;
-}
-
-#menuToggle .row:hover {
-  background-color: black;
-  background-image: none;
-  color: white;
-}
-
-#menuHead {
-  position: absolute;
-  display: none;
-
-}*/
 #menuToggle {
   margin-right: 15px;
 }
 
 .footer {
 background-color: black;
-/*margin-top: 50px;*/
 color: white;
-/*margin: 0 auto;*/
-/*margin-top: 50px;*/
 padding-bottom: 50px;
 }
 
@@ -186,7 +107,7 @@ padding-top: 50px;
 .scroll {
   border:2px solid white;
   margin: 0 auto;
-padding-top: 10em;
+  padding-top: 10em;
   width:100%;
   height:400px;
   overflow:scroll;
@@ -194,8 +115,8 @@ padding-top: 10em;
 
 .storelocator-panel {
   /*border: 2px solid black;*/
-    margin: 0 auto;
-padding-top: 10em;
+  margin: 0 auto;
+  padding-top: 10em;
 /*  width:100%;*/
   height:400px;
   overflow:scroll;
@@ -226,23 +147,6 @@ h3.navTop {
    cursor: pointer;
 }
 
-/*ul, menu, dir {
-  display: block;
-  list-style-type: disc;
-  -webkit-margin-before: 1em;
-  -webkit-margin-after: 1em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-  -webkit-padding-start: 40px;
-}*/
-
-/*@media (min-width: 768px)
-.no-touchevents .store-list {
-  pointer-events: all;
-  cursor: pointer;
-}*/
-
-/*@media (min-width: 768px)*/
 .store-list {
   width: 100%;
   position: relative;
@@ -261,20 +165,8 @@ h3.navTop {
   background: #f8f8f8;
   /*pointer-events: none;*/
   min-height: 200px; 
-
-
-
 }
 
-/*.store-list {
-  border: 1px solid #e0e0e0;
-  border-right: none;
-  border-left: none;
-  margin: 0 -4px;
-  background: #f8f8f8;
-  pointer-events: none;
-  min-height: 200px;
-}*/
 
 ul {
   list-style-type: none;
@@ -287,14 +179,11 @@ ul {
 }
 
 .store {
- /* border-bottom: 1px solid #e0e0e0;*/
-/*  padding: 8px 0 20px 8px;
-
-*/
   padding:5px;
   position: relative;
   z-index: 10000000;
 }
+
 .store:last-child {
   border: none;
 }
@@ -377,7 +266,7 @@ ul {
 }
 
 #bread {
-    margin-top: 50px;
+  margin-top: 50px;
   margin-bottom: 50px;
   color: black;
 }
@@ -389,10 +278,6 @@ ul {
 #name-blur {
   color: #CA9C82;
   border-radius: 10px;
-/*  top:20px;
-  position: absolute;
-  margin: 0 auto;*/
-
 }
 
 
