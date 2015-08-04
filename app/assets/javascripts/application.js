@@ -18,14 +18,14 @@
 
 
 
-$(document).ready(function(){
-$('#menuToggle').hide()	
+// $(document).ready(function(){
+// $('#menuToggle').hide()	
 
-	$('#navTop').click(function(){
-		$('#menuToggle').slideToggle()
-	})
+// 	$('#navTop').click(function(){
+// 		$('#menuToggle').slideToggle()
+// 	})
 
-})
+// })
 
 // $('#name-blur').addClass('animated bounceOutLeft');
 
