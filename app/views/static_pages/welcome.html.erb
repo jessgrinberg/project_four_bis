@@ -30,11 +30,24 @@
   <div class="row mapping">
     <div class=" col-sm-12">
       <form class="storelocator-filter">
+
+<%#= form_tag maps_path, :method => :get do %>
+    <%#= text_field_tag :search, params[:search] %>
+    <%#= submit_tag "Search.. ", :name => nil %>
+<%# end %>
+
+
+
+
+<!-- 
+      elastic search -->
         <%= form_tag maps_path, :method => :get do %>
         <strong><%= text_field_tag :search, params[:search], placeholder: "Search..." %></strong>
         <%#= text_field_tag :location, params[:address], placeholder: 'address'  %>
         <%#= number_field_tag :range, params[:range], placeholder: 'Distance in Miles' %>
  <!--    <div id="press"> <%#= submit_tag " Search " , :name => nil %></div> -->
+        
+<!-- end elastic search -->
         <% end %>
       </form>
       <div class=" col-sm-4 storelocator-panel">

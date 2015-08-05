@@ -8,15 +8,15 @@ class MapsController < ApplicationController
   # GET /maps
   # GET /maps.json
   def index
-#     if params[:search].present?
-#   @maps = Map.where("address ilike ? ", "%#{params[:search]}%")
+    if params[:search].present?
+  @maps = Map.where("address ilike ? ", "%#{params[:search]}%")
 
 
-# else
 
 
-  if params[:search].present?
-      @maps = Map.search params[:search]
+#elastic search
+  # if params[:search].present?
+  #     @maps = Map.search params[:search]
      
   else
     @maps = Map.all

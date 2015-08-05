@@ -2,12 +2,21 @@
 <div class="container">
   <h1>Bakers</h1>
   <hr>
-  <%= form_tag maps_path, :method => :get do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search..." %>
+
+<%= form_tag maps_path, :method => :get do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search ", :name => nil %>
+<% end %>
+
+<!-- #elastic search form tag -->
+  <%##= form_tag maps_path, :method => :get do %>
+    <%##= text_field_tag :search, params[:search], placeholder: "Search..." %>
     <%#= text_field_tag :location, params[:address], placeholder: 'address'  %>
     <%#= number_field_tag :range, params[:range], placeholder: 'Distance in Miles' %>
     <%#= submit_tag "Search ", :name => nil %>
-  <% end %>
+  <%## end %>
+
+  
   <hr>
 <div id="address-map" style="width: 100%; height: 400px;"></div>
 <hr>
